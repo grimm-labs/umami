@@ -37,6 +37,7 @@ builder:
 env:
   clear:
     NODE_ENV: <%= ENV["NODE_ENV"] %>
+    NODE_TLS_REJECT_UNAUTHORIZED: "0"
   secret:
     - DATABASE_URL
     - APP_SECRET
