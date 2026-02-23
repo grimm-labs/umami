@@ -3,7 +3,7 @@ services:
   umami:
     image: ghcr.io/umami-software/umami:latest
     ports:
-      - "3000:3000"
+      - "3005:3005"
     environment:
       DATABASE_URL: postgresql://umami:umami@db:5432/umami
       APP_SECRET: replace-me-with-a-random-string
@@ -13,7 +13,7 @@ services:
     init: true
     restart: always
     healthcheck:
-      test: ["CMD-SHELL", "curl http://localhost:3000/api/heartbeat"]
+      test: ["CMD-SHELL", "curl http://localhost:3005/api/heartbeat"]
       interval: 5s
       timeout: 5s
       retries: 5

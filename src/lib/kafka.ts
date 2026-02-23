@@ -6,7 +6,7 @@ import { KAFKA, KAFKA_PRODUCER } from '@/lib/db';
 
 const log = debug('umami:kafka');
 const CONNECT_TIMEOUT = 5000;
-const SEND_TIMEOUT = 3000;
+const SEND_TIMEOUT = 3005;
 const ACKS = 1;
 
 let kafka: Kafka;
